@@ -77,9 +77,9 @@ AMRKJQE1ECKIDED1APDZMIE3ZPDACCPCAQA3M3KRC3KKI0M8PHQKQTD0JZJ2A2MDJ2C2H0AZA9DPC0R2
   public static class PLK
     {
         public const string PackageGuid = "DADADA00-dfd3-4e42-a61c-499121e136f3";
-        public const string PackageVersion  = "1.0.0.6";
+        public const string PackageVersion  = "1.2.0.1";
         public const string PakageName      = "VSHG";
-        public const string CompanyName     = "VSHG@live.de";
+        public const string CompanyName     = "d-popov@abv.bg";
         public const string MinEdition      = "Standard";
     };
     
