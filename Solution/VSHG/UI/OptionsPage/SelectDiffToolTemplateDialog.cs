@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     /// Command templates for external diff tools

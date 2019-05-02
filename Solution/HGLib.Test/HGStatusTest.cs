@@ -74,7 +74,7 @@ namespace HGLib.Test
         public void ReadDirstate()
         {
             Dictionary<string, char> stateMap;
-            HGDirstate.ReadDirstate("r:\\VisualHG", out stateMap);
+            HGDirstate.ReadDirstate("r:\\VSHG", out stateMap);
             HGDirstate.ReadDirstate("R:\\SCTest\\NewDialogGB5HG", out stateMap);
         }
     }

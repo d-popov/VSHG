@@ -3,7 +3,7 @@
 
   <Extern href="stdidcmd.h"/>
   <Extern href="vsshlids.h"/>
-  <Extern href="msobtnid.h"/>
+  <!--<Extern href="msobtnid.h"/>-->
 
   <Commands package="HGPackageGuid">
     <Menus>
@@ -11,8 +11,8 @@
       <Menu guid="HGCommandSet" id="Menu_MainScc" priority="0x0000" type="Menu">
         <Parent guid="HGCommandSet" id="Group_MainScc"/>
         <Strings>
-          <ButtonText>VisualHG</ButtonText>
-          <CommandName>VisualHG</CommandName>
+          <ButtonText>VSHG</ButtonText>
+          <CommandName>VSHG</CommandName>
         </Strings>
       </Menu>
 
@@ -20,8 +20,8 @@
       <Menu guid="HGCommandSet" id="Menu_SolutionMenu" priority="0x0100" type="Menu">
         <Parent guid="HGCommandSet" id="Group_SolutionMenu"/>
         <Strings>
-          <ButtonText>VisualHG</ButtonText>
-          <CommandName>VisualHG</CommandName>
+          <ButtonText>VSHG</ButtonText>
+          <CommandName>VSHG</CommandName>
         </Strings>
       </Menu>
 
@@ -29,8 +29,8 @@
       <Menu guid="HGCommandSet" id="Menu_ProjectMenu" priority="0x0100" type="Menu">
         <Parent guid="HGCommandSet" id="Group_ProjectMenu"/>
         <Strings>
-          <ButtonText>VisualHG</ButtonText>
-          <CommandName>VisualHG</CommandName>
+          <ButtonText>VSHG</ButtonText>
+          <CommandName>VSHG</CommandName>
         </Strings>
       </Menu>
 
@@ -38,8 +38,8 @@
       <Menu guid="HGCommandSet" id="Menu_ItemMenu" priority="0x0100" type="Menu">
         <Parent guid="HGCommandSet" id="Group_ItemMenu"/>
         <Strings>
-          <ButtonText>VisualHG</ButtonText>
-          <CommandName>VisualHG</CommandName>
+          <ButtonText>VSHG</ButtonText>
+          <CommandName>VSHG</CommandName>
         </Strings>
       </Menu>
 
@@ -48,8 +48,8 @@
         <Parent guid="HGCommandSet" id="Group_Nowhere"/>
         <CommandFlag>DefaultDocked</CommandFlag>
         <Strings>
-          <ButtonText>VisualHG Source Control Toolbar</ButtonText>
-          <CommandName>VisualHG Source Control Toolbar</CommandName>
+          <ButtonText>VSHG Source Control Toolbar</ButtonText>
+          <CommandName>VSHG Source Control Toolbar</CommandName>
         </Strings>
       </Menu>
 
@@ -241,7 +241,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
-          <ButtonText>&amp;VisualHG Pending Changes</ButtonText>
+          <ButtonText>&amp;VSHG Pending Changes</ButtonText>
         </Strings>
       </Button>
 
@@ -270,7 +270,7 @@
     <!--A better approach though is to use one of the existing groups created for source control commands, -->
     <!--like IDG_VS_CTXT_ITEM_SCC, IDG_VS_CTXT_PROJECT_SCC, IDG_VS_CTXT_SOLUTION_SCC. -->
 
-    <!-- place HGCommands in the files/VisualHG menu -->
+    <!-- place HGCommands in the files/VSHG menu -->
     <CommandPlacement guid="HGCommandSet" id="Group_HGCommands" priority="0x0000">
       <Parent guid="HGCommandSet" id="Menu_MainScc"/>
     </CommandPlacement>
@@ -345,21 +345,21 @@
       <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
     </CommandPlacement>
 
-    <!-- solution VisualHG general menu on solution file soltree -->
+    <!-- solution VSHG general menu on solution file soltree -->
     <CommandPlacement guid="HGCommandSet" id="Group_HGCommands" priority="0x0000">
       <Parent guid="HGCommandSet" id="Menu_SolutionMenu"/>
     </CommandPlacement>
     <CommandPlacement guid="HGCommandSet" id="Menu_SolutionMenu" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
     </CommandPlacement>
-    <!-- project VisualHG general menu on project file in soltree -->
+    <!-- project VSHG general menu on project file in soltree -->
     <CommandPlacement guid="HGCommandSet" id="Group_HGCommands" priority="0x0000">
       <Parent guid="HGCommandSet" id="Menu_ProjectMenu"/>
     </CommandPlacement>
     <CommandPlacement guid="HGCommandSet" id="Menu_ProjectMenu" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
     </CommandPlacement>
-    <!-- item VisualHG general menu on item file soltree -->
+    <!-- item VSHG general menu on item file soltree -->
     <CommandPlacement guid="HGCommandSet" id="Group_HGCommands" priority="0x0000">
       <Parent guid="HGCommandSet" id="Menu_ItemMenu"/>
     </CommandPlacement>

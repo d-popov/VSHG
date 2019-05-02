@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio;
 using System.Windows.Forms;
 
-namespace VisualHG
+namespace VSHG
 {
     public partial class SccProviderService
     {
@@ -23,7 +23,7 @@ namespace VisualHG
         {
             Trace.WriteLine("OnAfterOpenSolution");
 
-            // Make VisualHG the active SCC controler on Mercurial solution types
+            // Make VSHG the active SCC controler on Mercurial solution types
             if (!Active && Configuration.Global._autoActivatePlugin)
             {
                 string root = this._sccProvider.GetRootDirectory();

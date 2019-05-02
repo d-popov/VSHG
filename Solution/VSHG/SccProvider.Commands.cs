@@ -9,7 +9,7 @@ using Microsoft.VisualStudio;
 using MsVsShell = Microsoft.VisualStudio.Shell;
 using System.Windows.Forms;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     /// SccProvider VSCT defined menu command handler
@@ -464,7 +464,7 @@ namespace VisualHG
                         {
                             if (Configuration.Global.ExternalDiffToolCommandMask != string.Empty)
                                 MessageBox.Show("The DiffTool raised an error\nPlease check your command mask:\n\n" + Configuration.Global.ExternalDiffToolCommandMask,
-                                                "VisualHG",
+                                                "VSHG",
                                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }                        
                     }

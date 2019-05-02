@@ -1,6 +1,6 @@
 using System;
 
-namespace VisualHG
+namespace VSHG
 {
 	/// <summary>
 	/// This class is used to expose the list of the IDs of the commands implemented

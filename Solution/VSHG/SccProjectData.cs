@@ -7,7 +7,7 @@ using Microsoft.VisualStudio;
 using System.Diagnostics;
 
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     /// Enum of project types with workarounds

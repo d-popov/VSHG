@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 
-namespace VisualHG
+namespace VSHG
 {
     partial class SccProvider
     {

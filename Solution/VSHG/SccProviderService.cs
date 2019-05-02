@@ -11,7 +11,7 @@ using Microsoft.VisualStudio;
 using System.Windows.Forms;
 
 
-namespace VisualHG
+namespace VSHG
 {
     [Guid(GuidList.ProviderServiceGuid)]
     public partial class SccProviderService :
@@ -343,7 +343,7 @@ namespace VisualHG
 
         private void UpdatePendingWindowState()
         {
-            object pane = _sccProvider.FindToolWindow(VisualHGToolWindow.PendingChanges);
+            object pane = _sccProvider.FindToolWindow(VSHGToolWindow.PendingChanges);
             if (pane != null)
             {
                 ((HGPendingChangesToolWindow)pane).UpdatePendingList(_sccStatusTracker);

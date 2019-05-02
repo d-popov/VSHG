@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio;
 using System.Windows.Forms;
 
-namespace VisualHG
+namespace VSHG
 {
     public partial class SccProviderService
     {

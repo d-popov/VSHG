@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Threading;
 
 
-namespace VisualHG
+namespace VSHG
 {
 
     // ---------------------------------------------------------------------------

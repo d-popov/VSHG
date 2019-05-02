@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace VisualHG
+namespace VSHG
 {
 	/// <summary>
     /// Summary description for SccProviderOptionsControl.
@@ -93,7 +93,7 @@ namespace VisualHG
             this.autoActivatePlugin.Name = "autoActivatePlugin";
             this.autoActivatePlugin.Size = new System.Drawing.Size(228, 17);
             this.autoActivatePlugin.TabIndex = 1;
-            this.autoActivatePlugin.Text = "Autoselect VisualHG for Mercurial solutions";
+            this.autoActivatePlugin.Text = "Autoselect VSHG for Mercurial solutions";
             this.autoActivatePlugin.UseVisualStyleBackColor = true;
             // 
             // editDiffToolButton

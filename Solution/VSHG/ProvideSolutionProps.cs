@@ -4,7 +4,7 @@ using System.Text;
 using System.Globalization;
 using Microsoft.VisualStudio.Shell;
 
-namespace VisualHG
+namespace VSHG
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     internal sealed class ProvideSolutionProps : RegistrationAttribute

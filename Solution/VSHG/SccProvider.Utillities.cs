@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     ///  SccProvider Utillity Function
@@ -545,7 +545,7 @@ namespace VisualHG
         /// <summary>
         /// Returns the filename of the specified controllable project 
         /// </summary>
-        public static string GetProjectFileName(VisualHG.SccProvider provider, IVsSccProject2 pscp2Project)
+        public static string GetProjectFileName(VSHG.SccProvider provider, IVsSccProject2 pscp2Project)
         {
             // Note: Solution folders return currently a name like "NewFolder1{1DBFFC2F-6E27-465A-A16A-1AECEA0B2F7E}.storage"
             // Your provider may consider returning the solution file as the project name for the solution, if it has to persist some properties in the "project file"

@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
 
-namespace VisualHG
+namespace VSHG
 {
   /// <summary>
   /// Summary description for SccProviderToolWindowControl.
@@ -74,7 +74,7 @@ namespace VisualHG
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.annotateFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openInEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._pendingItemsListView = new VisualHG.PendingItemsListView();
+            this._pendingItemsListView = new VSHG.PendingItemsListView();
             this.columnHeaderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pendingChangesContextMenu.SuspendLayout();

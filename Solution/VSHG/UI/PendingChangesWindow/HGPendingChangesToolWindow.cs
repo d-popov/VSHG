@@ -9,11 +9,12 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using VSHG;
 
 //using IServiceProvider = System.IServiceProvider;
 //using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     /// Summary description for SccProviderToolWindow.

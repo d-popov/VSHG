@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="100" xml:space="preserve">
-    <value>VisualHG</value>
+    <value>VSHG</value>
   </data>
   <data name="101" xml:space="preserve">
     <value>Mercurial source contol provider.</value>
@@ -137,7 +137,7 @@
     <value>Press Cancel to cancel this OnApply.  OK to continue</value>
   </data>
   <data name="ProviderName" xml:space="preserve">
-    <value>VisualHG</value>
+    <value>VSHG</value>
   </data>
   <data name="QEQS_EditUncontrolledReadOnly" xml:space="preserve">
     <value>The file {0} you are trying to edit is read only on disk. Do you want do make the file writable so you can continue editing it?</value>

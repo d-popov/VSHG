@@ -11,43 +11,43 @@ using System.Runtime.Serialization.Formatters.Binary;
 using MsVsShell = Microsoft.VisualStudio.Shell;
 using ErrorHandler = Microsoft.VisualStudio.ErrorHandler;
 
-namespace VisualHG
+namespace VSHG
 {
-  public enum VisualHGToolWindow
+  public enum VSHGToolWindow
   {
     None = 0,
     PendingChanges,
   }
 
-  // Register the VisualHG tool window visible only when the provider is active
+  // Register the VSHG tool window visible only when the provider is active
   [MsVsShell.ProvideToolWindow(typeof(HGPendingChangesToolWindow))]
   [MsVsShell.ProvideToolWindowVisibility(typeof(HGPendingChangesToolWindow), GuidList.ProviderGuid)]
   public partial class SccProvider 
   {
     //public ToolWindowPane FindToolWindow(Type toolWindowType, int id, bool create);
-    public void ShowToolWindow(VisualHGToolWindow window)
+    public void ShowToolWindow(VSHGToolWindow window)
     {
       ShowToolWindow(window, 0, true);
     }
 
-    Type GetPaneType(VisualHGToolWindow toolWindow)
+    Type GetPaneType(VSHGToolWindow toolWindow)
     {
       switch (toolWindow)
       {
-        case VisualHGToolWindow.PendingChanges:
+        case VSHGToolWindow.PendingChanges:
           return typeof(HGPendingChangesToolWindow);
         default:
           throw new ArgumentOutOfRangeException("toolWindow");
       }
     }
 
-    public ToolWindowPane FindToolWindow(VisualHGToolWindow toolWindow)
+    public ToolWindowPane FindToolWindow(VSHGToolWindow toolWindow)
     {
       ToolWindowPane pane = FindToolWindow(GetPaneType(toolWindow), 0, false);
       return pane;
     }
     
-    public void ShowToolWindow(VisualHGToolWindow toolWindow, int id, bool create)
+    public void ShowToolWindow(VSHGToolWindow toolWindow, int id, bool create)
     {
         try
         {

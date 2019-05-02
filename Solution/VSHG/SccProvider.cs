@@ -16,8 +16,11 @@ using Microsoft.VisualStudio;
 using System.Runtime.Serialization.Formatters.Binary;
 using MsVsShell = Microsoft.VisualStudio.Shell;
 using ErrorHandler = Microsoft.VisualStudio.ErrorHandler;
+using Task = System.Threading.Tasks.Task;
+using System.Threading;
+using Microsoft.VisualStudio.Shell;
 
-namespace VisualHG
+namespace VSHG
 {
     /////////////////////////////////////////////////////////////////////////////
     // SccProvider
@@ -31,14 +34,14 @@ namespace VisualHG
     // Everytime the version number changes VS will automatically update the menus on startup; if the version doesn't change, you will need to run manually "devenv /setup /rootsuffix:Exp" to see VSCT changes reflected in IDE
     [MsVsShell.ProvideMenuResource(1000, 1)]
     
-    // Register the VisualHG options page visible as Tools/Options/SourceControl/VisualHG when the provider is active
-    [MsVsShell.ProvideOptionPage(typeof(SccProviderOptions), "Source Control", "VisualHG", 106, 107, false)]
-    [ProvideToolsOptionsPageVisibility("Source Control", "VisualHG", GuidList.ProviderGuid)]
+    // Register the VSHG options page visible as Tools/Options/SourceControl/VSHG when the provider is active
+    [MsVsShell.ProvideOptionPage(typeof(SccProviderOptions), "Source Control", "VSHG", 106, 107, false)]
+    [ProvideToolsOptionsPageVisibility("Source Control", "VSHG", GuidList.ProviderGuid)]
 
     // Register the source control provider's service (implementing IVsScciProvider interface)
-    [MsVsShell.ProvideService(typeof(SccProviderService), ServiceName = "VisualHG")]
+    [MsVsShell.ProvideService(typeof(SccProviderService), ServiceName = "VSHG")]
     // Register the source control provider to be visible in Tools/Options/SourceControl/Plugin dropdown selector
-    [ProvideSourceControlProvider("VisualHG", "#100")]
+    [@ProvideSourceControlProvider("VSHG", "#100")]
     // Pre-load the package when the command UI context is asserted (the provider will be automatically loaded after restarting the shell if it was active last time the shell was shutdown)
     [MsVsShell.ProvideAutoLoad(GuidList.ProviderGuid)]
     // Register the key used for persisting solution properties, so the IDE will know to load the source control package when opening a controlled solution containing properties written by this package
@@ -46,18 +49,18 @@ namespace VisualHG
     [MsVsShell.ProvideLoadKey(PLK.MinEdition, PLK.PackageVersion, PLK.PakageName, PLK.CompanyName, 104)]
     // Declare the package guid
     [Guid(PLK.PackageGuid)]
-    public sealed partial class SccProvider : MsVsShell.Package, IOleCommandTarget
+    public sealed partial class SccProvider : MsVsShell.AsyncPackage, IOleCommandTarget
     {
         static SccProvider _SccProvider = null;
         // The service provider implemented by the package
         private SccProviderService sccService = null;
         // The name of this provider (to be written in solution and project files)
         // As a best practice, to be sure the provider has an unique name, a guid like the provider guid can be used as a part of the name
-        private const string _strProviderName = "VisualHG:"+PLK.PackageGuid;
+        private const string _strProviderName = "VSHG:"+PLK.PackageGuid;
         // The name of the solution section used to persist provider options (should be unique)
-        private const string _strSolutionPersistanceKey = "VisualHGProperties";
+        private const string _strSolutionPersistanceKey = "VSHGProperties";
         // The name of the section in the solution user options file used to persist user-specific options (should be unique, shorter than 31 characters and without dots)
-        private const string _strSolutionUserOptionsKey = "VisualHGSolution";
+        private const string _strSolutionUserOptionsKey = "VSHGSolution";
         // The names of the properties stored by the provider in the solution file
         private const string _strSolutionControlledProperty = "SolutionIsControlled";
         private const string _strSolutionBindingsProperty = "SolutionBindings";
@@ -75,7 +78,7 @@ namespace VisualHG
         void PromptSolutionNotControlled()
         {
             string solutionName = GetSolutionFileName();
-            MessageBox.Show("Solution is not under Mercurial version contol\n\n" + solutionName, "VisualHG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Solution is not under Mercurial version contol\n\n" + solutionName, "VSHG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         /////////////////////////////////////////////////////////////////////////////
@@ -98,8 +101,14 @@ namespace VisualHG
         {
           get { return _SccProvider; }
         }
-
-        protected override void Initialize()
+        protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
+        {
+            // When initialized asynchronously, the current thread may be a background thread at this point.
+            // Do any initialization that requires the UI thread after switching to the UI thread.
+            await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
+            await Initialize();
+        }
+        protected async Task Initialize()
         {
             Trace.WriteLine(String.Format(CultureInfo.CurrentUICulture, "Entering Initialize() of: {0}", this.ToString()));
             base.Initialize();
@@ -120,7 +129,7 @@ namespace VisualHG
             _OnIdleEvent.RegisterForIdleTimeCallbacks(GetGlobalService(typeof(SOleComponentManager)) as IOleComponentManager);
             _OnIdleEvent.OnIdleEvent += new OnIdleEvent(sccService.UpdateDirtyNodesGlyphs);
             
-            //ShowToolWindow(VisualHGToolWindow.PendingChanges);
+            //ShowToolWindow(VSHGToolWindow.PendingChanges);
         }
 
         protected override void Dispose(bool disposing)

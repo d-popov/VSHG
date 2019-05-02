@@ -1,4 +1,4 @@
-﻿namespace VisualHG
+﻿namespace VSHG
 {
     /// <summary>
     /// Command templates for external diff tools

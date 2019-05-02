@@ -10,7 +10,7 @@ using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using MsVsShell = Microsoft.VisualStudio.Shell;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     /// Summary description for SccProviderOptions.

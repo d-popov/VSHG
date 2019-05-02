@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Text;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
-    /// visualhg configuration properties container
+    /// VSHG configuration properties container
     /// </summary>
     public class Configuration
     {

@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using MsVsShell = Microsoft.VisualStudio.Shell;
 
-namespace VisualHG
+namespace VSHG
 {
 	/// <summary>
 	/// This attribute registers the visibility of a Tools/Options property page.

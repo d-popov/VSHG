@@ -4,7 +4,7 @@ using System.Text;
 using System.ComponentModel;
 using Microsoft.Win32;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
     /// registry read/write helper tool
@@ -21,7 +21,7 @@ namespace VisualHG
             if (string.IsNullOrEmpty(subKey))
                 throw new ArgumentNullException("subKey");
 
-            return Registry.CurrentUser.OpenSubKey("SOFTWARE\\VisualHG\\" + subKey, RegistryKeyPermissionCheck.ReadSubTree);
+            return Registry.CurrentUser.OpenSubKey("SOFTWARE\\VSHG\\" + subKey, RegistryKeyPermissionCheck.ReadSubTree);
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace VisualHG
             if (string.IsNullOrEmpty(subKey))
                 throw new ArgumentNullException("subKey");
 
-            return Registry.CurrentUser.CreateSubKey("SOFTWARE\\VisualHG\\" + subKey);
+            return Registry.CurrentUser.CreateSubKey("SOFTWARE\\VSHG\\" + subKey);
         }
 
         /// <summary>

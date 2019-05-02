@@ -6,10 +6,10 @@ using System.Collections;
 using System.IO;
 using System.Diagnostics;
 
-namespace VisualHG
+namespace VSHG
 {
     /// <summary>
-    /// This enum specified the usage of glyph icons by VisualHG
+    /// This enum specified the usage of glyph icons by VSHG
     /// </summary>
     /// <remarks>This enum contains 16 members which should map the VsStateIcon class if possible</remarks>
     public enum HGGlyph

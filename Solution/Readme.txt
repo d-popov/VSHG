@@ -9,28 +9,28 @@ Licence   : GNU General Public License (GPL) (v2.0)
 
 -------------------------------------------------------
 
-VisualHG 2010 - 2015 codebase
+VSHG 2010 - 2015 codebase
 -----------------------------
 
 Get the source code
 
-  clone the repository from http://hg.sharesource.org/visualhg
+  clone the repository from http://hg.sharesource.org/VSHG
 
-Usage of the VisualHG build environment requires at least:
+Usage of the VSHG build environment requires at least:
 
   Visual Studio 2010 Professional Edition or Higher
   Visual Studio 2010 SDK
 
-Usage of the VisualHG itself requires at least:
+Usage of the VSHG itself requires at least:
 
   Mercurial and TortoiseHG installed
   
 Experimental Hive Options
 
 	You can start Visual Studio with the experimental hive if you copy
-	the following settings to the debug command of the VisualHG project.
+	the following settings to the debug command of the VSHG project.
 
-	Right-click the VisualHG project and select the "Properties" option.
+	Right-click the VSHG project and select the "Properties" option.
 	Select the Debug tab and put the path to devenv.exe for your appropriate
 	version of VS.NET into the "Start External Program" field.
 	
@@ -42,29 +42,29 @@ Experimental Hive Options
 
 
 
-VisualHG 2005 - 2008 codebase
+VSHG 2005 - 2008 codebase
 -----------------------------
 
 Get the source code
 
-  clone the repository from http://hg.sharesource.org/visualhg
+  clone the repository from http://hg.sharesource.org/VSHG
 
-Usage of the VisualHG build environment requires at least:
+Usage of the VSHG build environment requires at least:
 
   Visual Studio 2008 Standard Edition or Higher
   Visual Studio 2008 SDK
   Votive (Including Wix 3.0) beta for setup
 
-Usage of the VisualHG itself requires at least:
+Usage of the VSHG itself requires at least:
 
   Mercurial and TortoiseHG installed
   
 Experimental Hive Options
 
 	You can start Visual Studio with the experimental hive if you copy
-	the following settings to the debug command of the VisualHG project.
+	the following settings to the debug command of the VSHG project.
 
-	Right-click the VisualHG project and select the "Properties" option.
+	Right-click the VSHG project and select the "Properties" option.
 	Select the Debug tab and put the path to devenv.exe for your appropriate
 	version of VS.NET into the "Start External Program" field.
 	
@@ -77,8 +77,8 @@ Experimental Hive Options
 2005 Support (for release build only)
 -------------------------------------
 PkgCmd.vsct is not supported for VS2005, so we have to compile the project
-one time with the following 2008 ItemGroup settings in VisualHG.csproj to
-build the setup files VisualHG-2005.wxi and VisualHG-2008.wxi.
+one time with the following 2008 ItemGroup settings in VSHG.csproj to
+build the setup files VSHG-2005.wxi and VSHG-2008.wxi.
 
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.VisualStudio.Shell.9.0" />

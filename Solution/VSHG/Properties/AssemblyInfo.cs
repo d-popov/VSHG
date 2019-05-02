@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("VisualHG")]
+[assembly: AssemblyTitle("VSHG")]
 [assembly: AssemblyDescription("Mercurual Source Control Provider")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VisualHG")]
+[assembly: AssemblyProduct("VSHG")]
 [assembly: AssemblyCopyright("Copyright © Bernd Schrader 2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]        

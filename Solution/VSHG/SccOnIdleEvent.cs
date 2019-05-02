@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.OLE.Interop;
 using System.Runtime.InteropServices;
 
-namespace VisualHG
+namespace VSHG
 {
     // ------------------------------------------------------------------------
     // IOleComponent OnIdle trigger
