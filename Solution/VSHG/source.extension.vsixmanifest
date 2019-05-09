@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="84a06d4f-da93-4015-a822-6b3d1b6d2756" Version="1.2.0.1" Language="en-US" Publisher="Dobromir Popov" />
+        <Identity Id="VSHG.84a06d4f-da93-4015-a822-6b3d1b6d2756" Version="1.2.0.1" Language="en-US" Publisher="Dobromir Popov" />
         <DisplayName>VSHG</DisplayName>
-        <Description xml:space="preserve">Source control integration for Mercurial</Description>
-        <MoreInfo></MoreInfo>
+        <Description xml:space="preserve">Visual Studio 2019 source control integration for Mercurial</Description>
+        <MoreInfo>https://github.com/d-popov/VSHGhttps://github.com/d-popov/VSHG</MoreInfo>
         <License>License.txt</License>
         <GettingStartedGuide></GettingStartedGuide>
-        <Icon>Resources\Product.ico</Icon>
-        <PreviewImage></PreviewImage>
-        <Tags>SharePoint Framework</Tags>
+        <Icon>Resources\Logo.ico</Icon>
+        <PreviewImage>Resources\Logo.ico</PreviewImage>
     </Metadata>
     <Installation AllUsers="true">
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,17.0)" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0,16.0)" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.VisualStudio.MPF" DisplayName="Visual Studio MPF" d:Source="Manual" Version="[10.0,)" />
