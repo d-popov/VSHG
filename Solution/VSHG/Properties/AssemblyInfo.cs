@@ -1,3 +1,4 @@
+using Microsoft.VisualStudio.Shell;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -12,7 +13,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("VSHG")]
-[assembly: AssemblyCopyright("Copyright © Bernd Schrader 2008")]
+[assembly: AssemblyCopyright("Copyright © Bernd Schrader 2008, Dobromir Popov 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]        
 
@@ -33,8 +34,8 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.1.7")]
-[assembly: AssemblyFileVersion("1.1.7")]
+[assembly: AssemblyVersion("1.2.0")]
+[assembly: AssemblyFileVersion("1.2.0")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 
@@ -64,3 +65,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDelaySign(false)]
 [assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]
+
+
+//[assembly: ProvideBindingRedirection(AssemblyName = "Microsoft.VisualStudio.Shell.Framework",
+ //     NewVersion = "15.0.0.0", OldVersionLowerBound = "16.0.0.0", PublicKeyToken = "b03f5f7f11d50a3a" ,Culture = "neutral")]
+// OldVersionLowerBound = "0.0.0.0", OldVersionUpperBound = "15.0.0.0"
+

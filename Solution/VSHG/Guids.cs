@@ -75,6 +75,20 @@ namespace VSHG
 
   */
 
+
+    /*
+     * 
+    Ver 1.2.0
+    Internal name: vshg v.1.2.0
+    public const string PackageGuid     = "DADADA00-dfd3-4e42-a61c-499121e136f3";
+    public const string PackageVersion  = "1.2.0.1";
+    public const string PakageName      = "VSHG";
+    public const string CompanyName     = "d-popov@abv.bg";
+    public const string MinEdition      = "Standard";
+ 
+     */
+
+
     public static class PLK
     {
         public const string PackageGuid = "DADADA00-dfd3-4e42-a61c-499121e136f3";

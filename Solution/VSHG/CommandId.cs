@@ -7,7 +7,7 @@ namespace VSHG
 	/// by the client package. This list of IDs must match the set of IDs defined inside the
 	/// VSCT file.
 	/// </summary>
-	public static class CommandId
+	public static class CommandId 
 	{
 		// Define the list a set of public static members.
 
