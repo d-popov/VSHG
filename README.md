@@ -14,16 +14,3 @@ File status icon for renamed files
 File state indicating tooltips
 View per file branch label in file tooltip
 
-### To learn more about Mercurial, TortoiseHG and VisualHG watch Rob Conery's excellent video tutorial
-
-Contributions are most welcome! Contact me at VisualHG@Live.de.
-
-To get started working with VisualHG is very simple.
-
-### (Deinstall prev Version of VisualHG).
-Download and install TortoiseHg and VisualHG. Or load from Visual Studio Extension Manager / Online Gallery.
-Open Visual Studio and go to Tools -> Options.
-
-In the options tree view, select Source Control. (You may need to click the Show all Settings checkbox)
-Select VisualHG from the drop down list, and click OK.
-Open your Mercurial based solution to see the plugin installed and determining your files' statuses.
