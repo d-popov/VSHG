@@ -1,28 +1,18 @@
 # Mercurial Source Control Plugin for MS Visual Studio
 
-VisualHG indicates file status within the project files tree of MSVC
+A fork of VisualHG, which works with Visual Studio 2019 and Visual Studio 2017.
 
+Don't forget to set your source control provider to VSHG after installation (Tools->Options--->Source Control->Plug-in Selection)
+
+VSHG indicates file status within the project files tree of MSVC
 Tracks adding, moving and renaming of file actions
-
 Give you dialogs for committing changes, viewing detailed status of files and history and many more. Using TortoiseHG as its backend
-
 Everything directly from your workspace via context menu and a toolbar
-
-Version 1.1.5 is compatible with MSVS 2005, MSVS 2008
-
-Version 1.1.7 is compatible with MSVS 2010, MSVS 2011, MSVS 2013 and MSVS 2015
-
 Support for Mercurial Subrepositories
-
 Recogonize projects under version control that are not in the same folder as the solution
-
 File status icon for renamed files
-
 File state indicating tooltips
-
 View per file branch label in file tooltip
-
-See some screenshots
 
 ### To learn more about Mercurial, TortoiseHG and VisualHG watch Rob Conery's excellent video tutorial
 
